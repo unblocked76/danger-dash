@@ -1,0 +1,1 @@
+const _ROOT_TRACE_PATH_=getContainerLocation()+"/game/Track";ScriptLoader.require({aScripts:[_ROOT_TRACE_PATH_+"/cSpriteEX.js",_ROOT_TRACE_PATH_+"/cTrackSection.js",_ROOT_TRACE_PATH_+"/cTrack.js",],fnCallbackEnd:function(){},fnCallbackError:function(){},});

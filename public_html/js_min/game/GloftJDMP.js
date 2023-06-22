@@ -1,0 +1,1 @@
+function GloftJDMP(){GloftJDMP.__superclass__.call(this);GloftJDMP.s_game=null;GloftJDMP.s_cMIDletInstance=this}LowAPI.extendClass(GloftJDMP,MIDlet);GloftJDMP.prototype.startApp=function(){if(GloftJDMP.s_game==null){GloftJDMP.s_game=new cGame(GloftJDMP.s_cMIDletInstance,Display.getDisplay(GloftJDMP.s_cMIDletInstance));GloftJDMP.s_game.Init()}GloftJDMP.s_game.Resume_cGame(false)};

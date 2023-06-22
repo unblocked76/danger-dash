@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Danger Dash</title>
+		<link rel="shortcut icon" type="image/x-icon" href="js_min/loading/favicon.png"/>
+		<link rel="shortcut icon" sizes="256x256" href="js_min/loading/favicon.png">
+		<link rel="apple-touch-icon" sizes="256x256" href="js_min/loading/favicon.png">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"/>
+		<meta name="title" content="Ludigames | Danger Dash">
+		<meta name="description" content="Survive through the jungle of the mysterious temple in Danger Dash and hold on for your life to score in the game's obstacles.">
+        <style>
+            html,body{height:100%;padding:0px; margin:0px; overflow:hidden;touch-action: none;-ms-touch-action: none;}
+            iframe{z-index:14000 !important;}
+            #gameloft-root-div{min-height:100%; position:relative;
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);}
+            .gameloft-display-div{position:absolute; top:0px; left:0px; width:100%; height:100%;
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);}
+			#overlay{position:fixed;width:100%;height:100%;top:0;left;0;background-color:rgba(0,0,0,0.5);z-index: 11000; display:none;}
+			#modal {position: absolute; top: 30%; height: 120px; width: 100%;  z-index: 12000; background-color:transparent; -webkit-transition: all 2.5s ease-in-out; -moz-transition: all 2.5s ease-in-out; -ms-transition: all 2.5s ease-in-out; -o-transition: all 2.5s ease-in-out; transition: all 2.5s ease-in-out; display: none;}
+			#modal #m-left {float: left; margin-left: 10%;}
+			#modal #m-right {float: right; margin-right: 10%;}
+        </style>
+     <script type='text/javascript'>  
+			window["GD_OPTIONS"] = {
+						"gameId": "7db866a70ddf41b784ee173482f2ff03",
+						"onEvent": function(event) {
+								window.dispatchEvent(new CustomEvent(event.name, {}));
+								switch (event.name) {
+										case "SDK_GAME_START":
+												window.focus();
+												// advertisement done, resume game logic and unmute audio
+												break;
+										case "SDK_GAME_PAUSE":
+												// pause game logic / mute audio
+												break;
+										case "SDK_GDPR_TRACKING":
+												// this event is triggered when your user doesn't want to be tracked
+												break;
+										case "SDK_GDPR_TARGETING":
+												// this event is triggered when your user doesn't want personalised targeting of ads and such
+												break;
+										case "SDK_REWARDED_WATCH_COMPLETE":
+												// this event is triggered when your user completely watched rewarded ad
+												break;
+								}
+						},
+				};
+				(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s);
+						js.id = id;
+						js.src = 'patch/js/gd-main.js';
+						fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'gamedistribution-jssdk'));
+			</script>
+    </head>
+    <body>
+		
+		<!-- gtm and ads init -->
+		<script type='text/javascript'>
+		
+			function setCookie(cname,cvalue) {
+				var d = new Date();
+				d.setTime(d.getTime() + (1*365*24*60*60*1000));
+				var expires = "expires=" + d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			};
+
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i < ca.length; i++) {
+				  var c = ca[i];
+				  while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				  }
+				  if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				  }
+				}
+				return "";
+			};
+		
+			var enableADS = !true;
+			playAds = function(){};
+			isAdsComplete = function(){return !false};
+			//var ima3AdsLoaded = true // prevent ads loaded by GTM
+			var isShowAdScreen = false;
+			var showAdButton = [];
+			dataLayer = [];
+			var productKey = "";
+			var productTitle = "Danger Dash"; // for tracking game name
+			var gtmID = "";
+			
+			gtmID = 'GTM-K74X66';
+			productKey = "dangerDash";
+			
+			dataLayer.push({
+				'event': 'pageLoad',
+				'publisher' :'GAMELOFT',
+			});
+			
+
+			(function(w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', gtmID);
+			
+		</script>
+		
+		
+		<!-- common functions -->
+		<script type='text/javascript'>
+			function insertScript(d, s, id, url) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {
+					return;
+				}
+				js = d.createElement(s);
+				js.id = id;
+				js.src = url;
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+
+			function loadOrderScript(url1, url2, url3) {
+				var script1 = document.createElement('script');
+				script1.setAttribute('src', url1);
+				script1.onload = function() {
+					if (typeof(url2) != 'undefined') {
+						var script2 = document.createElement('script');
+						script2.setAttribute('src', url2);
+						script2.onload = function() {						
+							if (typeof(url3) != 'undefined') {
+								var script3 = document.createElement('script');
+								script3.setAttribute('src', url3);
+								document.body.appendChild(script3);
+							}
+						}
+						document.body.appendChild(script2);
+					}
+				}
+				document.body.appendChild(script1);
+			}
+
+			function getBrowserName() {
+				var uAgent = navigator.userAgent;
+				var browserName = "unknown";
+				// In Opera 15+, the true version is after "OPR/" 
+				if (uAgent.indexOf("OPR/") != -1) {
+					browserName = "Opera";
+				}
+				// In older Opera, the true version is after "Opera" or after "Version"
+				else if (uAgent.indexOf("Opera") != -1) {
+					browserName = "Opera";
+				}
+				// In MSIE, the true version is after "MSIE" in userAgent
+				else if (uAgent.indexOf("MSIE") != -1) {
+					browserName = "Microsoft Internet Explorer";
+				}
+				// In Samsung
+				else if (uAgent.indexOf("SamsungBrowser") != -1) {
+					browserName = "SamsungBrowser";
+				}
+				// In Chrome, the true version is after "Chrome" 
+				else if (uAgent.indexOf("Chrome") != -1) {
+					browserName = "Chrome";
+				}
+				// In Safari, the true version is after "Safari" or after "Version" 
+				else if (uAgent.indexOf("Safari") != -1) {
+					browserName = "Safari";
+				}
+				// In Firefox, the true version is after "Firefox" 
+				else if (uAgent.indexOf("Firefox") != -1) {
+					browserName = "Firefox";
+				}
+				return browserName;
+			}
+
+			function getChromeMajorVersion() {
+				var uAgent = navigator.userAgent;
+				var offset = uAgent.indexOf("Chrome");
+				return parseInt(uAgent.substring(offset + 7, offset + 9));
+			}
+			document.addEventListener('keydown', function(event) {
+				event.preventDefault();
+			});
+		</script>
+		<!-- common functions end -->
+	
+	
+		<div class="overlay" id="overlay"></div>
+		<input type="hidden" id="page_is_dirty" value="no">
+		<script type="text/javascript">
+			onload = function () {
+				var e = document.getElementById("page_is_dirty");
+				if (e.value == "no") e.value = "yes";
+				else { e.value = "no"; location.reload(); }
+			}
+		</script>
+        <div id="gameloft-root-div">
+        </div>
+		<div id="adsContainer" style="margin:0;padding:0"> </div>
+		<div id="modal">
+			<h2 id="m-left"><img src="js_min/loading/ht_ui_rotate_screen.png" width="80" height="80" /></h2>
+			<h2 id="m-right"><img src="js_min/loading/ht_ui_rotate_screen.png" width="80" height="80" /></h2>
+		</div>
+        <script type="text/javascript" name="dangerdash" src="js_min/Main.js?v=0.0.9"></script>
+		
+		
+    </body>
+</html>

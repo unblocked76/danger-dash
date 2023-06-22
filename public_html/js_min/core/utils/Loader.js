@@ -1,0 +1,1 @@
+const _ROOT_UTILS_PATH_=getContainerLocation()+"/core/utils";ScriptLoader.require({aScripts:[_ROOT_UTILS_PATH_+"/LowAPI.js",_ROOT_UTILS_PATH_+"/Device.js",],fnCallbackEnd:function(){},fnCallbackError:function(){},});

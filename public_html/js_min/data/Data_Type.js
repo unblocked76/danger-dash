@@ -1,0 +1,1 @@
+Data_Type={};Data_Type.CUSTOM=1;Data_Type.INT8=2;Data_Type.UINT8=3;Data_Type.INT16=4;Data_Type.UINT16=5;Data_Type.INT32=6;Data_Type.UINT32=7;Data_Type.STRING=8;Data_Type.COUNT=8;
